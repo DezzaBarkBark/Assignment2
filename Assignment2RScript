@@ -1,0 +1,52 @@
+#Assignment 1 
+
+#1. Through right clicking each file and clicking get info, I can see that 
+#file weather3.c is in the CSV format. 
+
+#2. 
+
+read.csv("/Users/beckysullivan/Desktop/R course/weather3.c")
+
+#3 
+
+setwd("/Users/beckysullivan/Desktop/R course")
+
+read.csv("weather3.c")
+
+#4
+
+read.csv("/Users/beckysullivan/Desktop/R course/data20130101.csv")
+
+data20130101<-read.csv("data20130101.csv", row.names=1)
+
+#5
+
+maxValue <- max(data20130101)
+minValue <- min(data20130101)
+
+#6 
+
+maxValue *0.0145037738
+
+#7 
+#Reading all 9 files
+
+#set working directory 
+
+setwd("/Users/beckysullivan/Desktop/R course")
+
+data20130101 <- read.csv("data20130101.csv", row.names=1)
+data20130102 <- read.csv("data20130102.csv", row.names=1)
+data20130103 <- read.csv("data20130103.csv", row.names=1)
+data20130104 <- read.csv("data20130104.csv", row.names=1)
+data20130105 <- read.csv("data20130105.csv", row.names=1)
+data20130106 <- read.csv("data20130106.csv", row.names=1)
+data20130107 <- read.csv("data20130107.csv", row.names=1)
+data20130108 <- read.csv("data20130108.csv", row.names=1)
+data20130109 <- read.csv("data20130109.csv", row.names=1)
+
+#calculating maximum value across 9 files
+
+maxValue <- max(data20130101, data20130102, data20130103, data20130104,
+                data20130105, data20130106, data20130107, data20130108,
+                data20130109)
